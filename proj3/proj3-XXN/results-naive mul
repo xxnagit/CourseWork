@@ -1,0 +1,132 @@
+Time limit for this program set to 10 seconds
+Size 512 naive CPU: 0.788000 ms
+Size 512 GPU memcpy: 0.034336 ms
+Size 512 naive GPU: 0.065184 ms
+Size 512 shmem GPU: 0.023424 ms
+Size 512 optimal GPU: 0.020832 ms
+
+Size 1024 naive CPU: 2.693952 ms
+Size 1024 GPU memcpy: 0.060576 ms
+Size 1024 naive GPU: 0.135232 ms
+Size 1024 shmem GPU: 0.053536 ms
+Size 1024 optimal GPU: 0.057152 ms
+
+Size 2048 naive CPU: 11.445728 ms
+Size 2048 GPU memcpy: 0.212480 ms
+Size 2048 naive GPU: 0.510016 ms
+Size 2048 shmem GPU: 0.188320 ms
+Size 2048 optimal GPU: 0.204576 ms
+
+Size 4096 naive CPU: 178.398529 ms
+Size 4096 GPU memcpy: 0.741824 ms
+Size 4096 naive GPU: 2.056160 ms
+Size 4096 shmem GPU: 0.732640 ms
+Size 4096 optimal GPU: 0.796864 ms
+
+c221-504.maverick(78)$ ./matmul
+Size 512 naive CPU: 95.600449 ms
+Size 512 naive GPU: 26.266975 ms
+Size 512 cache GPU: 26.193377 ms
+Size 512 shared GPU: 26.265663 ms
+
+Size 1024 naive CPU: 741.370850 ms
+Size 1024 naive GPU: 203.089478 ms
+Size 1024 cache GPU: 202.414047 ms
+Size 1024 shared GPU: 203.104645 ms
+
+Size 2048 naive CPU: 5972.540527 ms
+Size 2048 naive GPU: 1604.138306 ms
+Size 2048 cache GPU: 1599.359741 ms
+Size 2048 shared GPU: 1603.341431 ms
+
+Size 4096 naive CPU: 53805.433594 ms
+Size 4096 naive GPU: 12814.395508 ms
+Size 4096 cache GPU: 12772.203125 ms
+Size 4096 shared GPU: 12831.827148 ms
+-----------------------------------------
+Time limit for this program set to 10 seconds --optimized
+Size 512 naive CPU: 0.779520 ms
+Size 512 GPU memcpy: 0.033760 ms
+Size 512 naive GPU: 0.058688 ms
+Size 512 shmem GPU: 0.021856 ms
+Size 512 optimal GPU: 0.019200 ms
+
+Size 1024 naive CPU: 2.592096 ms
+Size 1024 GPU memcpy: 0.060256 ms
+Size 1024 naive GPU: 0.134496 ms
+Size 1024 shmem GPU: 0.054848 ms
+Size 1024 optimal GPU: 0.056352 ms
+
+Size 2048 naive CPU: 11.028992 ms
+Size 2048 GPU memcpy: 0.211840 ms
+Size 2048 naive GPU: 0.514208 ms
+Size 2048 shmem GPU: 0.191616 ms
+Size 2048 optimal GPU: 0.205632 ms
+
+Size 4096 naive CPU: 177.857178 ms
+Size 4096 GPU memcpy: 0.741440 ms
+Size 4096 naive GPU: 2.053984 ms
+Size 4096 shmem GPU: 0.732224 ms
+Size 4096 optimal GPU: 0.796768 ms
+
+c221-504.maverick(82)$ ./matmul
+Size 512 naive CPU: 95.473022 ms
+Size 512 naive GPU: 2.399072 ms
+Size 512 cache GPU: 2.109472 ms
+Size 512 shared GPU: 0.760768 ms
+
+Size 1024 naive CPU: 742.188599 ms
+Size 1024 naive GPU: 18.147425 ms
+Size 1024 cache GPU: 16.699009 ms
+Size 1024 shared GPU: 5.817344 ms
+
+Size 2048 naive CPU: 5919.181152 ms
+Size 2048 naive GPU: 141.809692 ms
+Size 2048 cache GPU: 132.644028 ms
+Size 2048 shared GPU: 46.328480 ms
+
+Size 4096 naive CPU: 53738.089844 ms
+Size 4096 naive GPU: 1150.191528 ms
+Size 4096 cache GPU: 1060.916016 ms
+Size 4096 shared GPU: 371.979065 ms
+
+-----------------updated 
+Size 512 naive CPU: 96.126556 ms
+Size 512 naive GPU: 2.393152 ms
+Size 512 cache GPU: 8.708224 ms
+Size 512 shared GPU: 0.761792 ms
+
+Size 1024 naive CPU: 742.379272 ms
+Size 1024 naive GPU: 17.950592 ms
+Size 1024 cache GPU: 69.436668 ms
+Size 1024 shared GPU: 5.891328 ms
+
+Size 2048 naive CPU: 5916.551758 ms
+Size 2048 naive GPU: 141.012863 ms
+Size 2048 cache GPU: 541.046814 ms
+Size 2048 shared GPU: 46.492191 ms
+
+Size 4096 naive CPU: 53887.980469 ms
+Size 4096 naive GPU: 1140.422852 ms
+Size 4096 cache GPU: 4297.110352 ms
+Size 4096 shared GPU: 368.570679 ms
+--------------------final
+Size 512 naive CPU: 95.523392 ms
+Size 512 naive GPU: 2.400896 ms
+Size 512 cache GPU: 2.119584 ms
+Size 512 shared GPU: 0.763104 ms
+
+Size 1024 naive CPU: 741.913513 ms
+Size 1024 naive GPU: 18.045759 ms
+Size 1024 cache GPU: 17.365856 ms
+Size 1024 shared GPU: 5.860544 ms
+
+Size 2048 naive CPU: 5976.682617 ms
+Size 2048 naive GPU: 141.647995 ms
+Size 2048 cache GPU: 137.167236 ms
+Size 2048 shared GPU: 46.116673 ms
+
+Size 4096 naive CPU: 53851.527344 ms
+Size 4096 naive GPU: 1148.214478 ms
+Size 4096 cache GPU: 1096.950806 ms
+Size 4096 shared GPU: 372.610901 ms
