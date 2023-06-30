@@ -1,0 +1,40 @@
+#!/bin/bash -l
+#SBATCH -N 1                # you'll never need more than 1 node for the serial code
+#SBATCH -t 00:20:00         # adjust the amount of time as necessary
+#SBATCH -J auto-openmp32
+#SBATCH -o auto-openmp32.%j.stdout
+#SBATCH -e auto-openmp32.%j.error
+
+rm openmp2.txt
+./serial -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=1
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=2
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=4
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=6
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=12
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=18
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=24
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=32
+./openmp -n 500 -no -s openmp2.txt
+export OMP_NUM_THREADS=2
+./openmp -n 1000 -no -s openmp2.txt
+export OMP_NUM_THREADS=4
+./openmp -n 2000 -no -s openmp2.txt
+export OMP_NUM_THREADS=6
+./openmp -n 3000 -no -s openmp2.txt
+export OMP_NUM_THREADS=12
+./openmp -n 6000 -no -s openmp2.txt
+export OMP_NUM_THREADS=18
+./openmp -n 9000 -no -s openmp2.txt
+export OMP_NUM_THREADS=24
+./openmp -n 12000 -no -s openmp2.txt
+export OMP_NUM_THREADS=32
+./openmp -n 16000 -no -s openmp2.txt
+./autograder -v openmp -s openmp2.txt

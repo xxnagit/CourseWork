@@ -1,0 +1,205 @@
+serial - naive
+500 4.49939
+1000 17.8947
+2000 73.5546
+4000 303.358
+6000 644.423
+
+Serial code is O(N^slope)
+Slope estimates are : 1.991731 2.039283 2.044134 1.858216
+Slope estimate for line fit is: 2.009265
+----------------------------------------------------------
+serial - optimized 
+500 0.652202
+1000 1.31441
+2000 2.63911
+4000 5.35338
+6000 8.13414
+
+Serial code is O(N^slope)
+Slope estimates are : 1.011025 1.005636 1.020399 1.031758
+Slope estimate for line fit is: 1.014651
+-----------
+
+5000 6.7332
+15000 20.5763
+20000 27.4447
+40000 55.2431
+60000 87.8858
+
+Serial code is O(N^slope)
+Slope estimates are : 1.016819 1.001220 1.009267 1.145092
+Slope estimate for line fit is: 1.027406
+
+-----------------------------------------------------------
+mpi - naive
+500 0.647064
+500 1 4.45359
+500 2 2.27995
+500 4 1.17055
+500 6 0.80781
+500 8 0.630182
+1000 2 8.96745
+2000 4 18.6793
+3000 6 28.0924
+6000 8 84.2137
+
+Strong scaling estimates are :
+    0.15    0.28    0.55    0.80    1.03 (speedup)
+    0.15    0.14    0.14    0.13    0.13 (efficiency)    for
+       1       2       4       6       8 threads/processors
+
+Average strong scaling efficiency:    0.14 
+
+Weak scaling estimates are :
+    0.15    0.07    0.03    0.02    0.01 (efficiency)    for
+       1       2       4       6       8 threads/processors
+
+Average weak scaling efficiency:    0.06 
+---------------------------------------------------------------
+mpi - optimized
+
+500 0.643791
+500 1 0.679891
+500 2 0.304984
+500 4 0.172034
+500 6 0.130419
+500 8 0.120158
+1000 2 0.642149
+2000 4 0.650942
+3000 6 0.718138
+6000 8 1.18182
+
+Strong scaling estimates are :
+    0.95    2.11    3.74    4.94    5.36 (speedup)
+    0.95    1.06    0.94    0.82    0.67 (efficiency)    for
+       1       2       4       6       8 threads/processors
+
+Average strong scaling efficiency:    0.89 
+
+Weak scaling estimates are :
+    0.95    1.00    0.99    0.90    0.54 (efficiency)    for
+       1       2       4       6       8 threads/processors
+
+Average weak scaling efficiency:    0.88 
+----------
+5000 6.74093
+5000 1 7.024
+5000 2 3.37506
+5000 4 1.65818
+5000 6 1.13798
+5000 8 1.0596
+10000 2 6.91014
+20000 4 6.91481
+30000 6 7.27235
+60000 8 11.1864
+
+Strong scaling estimates are :
+    0.96    2.00    4.07    5.92    6.36 (speedup)
+    0.96    1.00    1.02    0.99    0.80 (efficiency)    for
+       1       2       4       6       8 threads/processors
+
+Average strong scaling efficiency:    0.95 
+
+Weak scaling estimates are :
+    0.96    0.98    0.97    0.93    0.60 (efficiency)    for
+       1       2       4       6       8 threads/processors
+
+Average weak scaling efficiency:    0.89 
+
+---------------------------------------------------------------
+openmp - naive
+500 0.644094
+500 1 4.60934
+500 2 2.39668
+500 4 1.26823
+500 6 0.893189
+500 12 0.533691
+500 18 0.433656
+500 24 0.441833
+500 32 0.800103
+1000 2 9.71025
+2000 4 19.5053
+3000 6 29.4135
+6000 12 58.8271
+9000 18 88.1273
+12000 24 123.094
+16000 32 268.39
+
+Strong scaling estimates are :
+    0.14    0.27    0.51    0.72    1.21    1.49    1.46    0.81 (speedup)
+    0.14    0.13    0.13    0.12    0.10    0.08    0.06    0.03 (efficiency)    for
+       1       2       4       6      12      18      24      32 threads/processors
+
+Average strong scaling efficiency:    0.10 
+
+Weak scaling estimates are :
+    0.14    0.07    0.03    0.02    0.01    0.01    0.01    0.00 (efficiency)    for
+       1       2       4       6      12      18      24      32 threads/processors
+
+Average weak scaling efficiency:    0.04 
+-----------------------------------------------------------------
+openmp - optimized
+500 0.643431
+500 1 0.086641
+500 2 0.054808
+500 4 0.038086
+500 6 0.032708
+500 12 0.039746
+500 18 0.064324
+500 24 0.111411
+500 32 0.190339
+1000 2 0.094979
+2000 4 0.098663
+3000 6 0.103057
+6000 12 0.123266
+9000 18 0.150158
+12000 24 0.198861
+16000 32 0.176998
+
+
+Strong scaling estimates are :
+    7.43   11.74   16.89   19.67   16.19   10.00    5.78    3.38 (speedup)
+    7.43    5.87    4.22    3.28    1.35    0.56    0.24    0.11 (efficiency)    for
+       1       2       4       6      12      18      24      32 threads/processors
+
+Average strong scaling efficiency:    2.88 
+
+Weak scaling estimates are :
+    7.43    6.77    6.52    6.24    5.22    4.29    3.24    3.64 (efficiency)    for
+       1       2       4       6      12      18      24      32 threads/processors
+
+Average weak scaling efficiency:    5.42 
+----------
+5000 6.72051
+5000 1 0.827446
+5000 2 0.437314
+5000 4 0.23603
+5000 6 0.175107
+5000 12 0.100155
+5000 18 0.106487
+5000 24 0.139663
+5000 32 0.243005
+10000 2 0.831386
+20000 4 0.86903
+30000 6 0.881964
+60000 12 0.926128
+90000 18 0.920795
+120000 24 1.03447
+160000 32 1.07086
+
+Strong scaling estimates are :
+    8.12   15.37   28.47   38.38   67.10   63.11   48.12   27.66 (speedup)
+    8.12    7.68    7.12    6.40    5.59    3.51    2.00    0.86 (efficiency)    for
+       1       2       4       6      12      18      24      32 threads/processors
+
+Average strong scaling efficiency:    5.16 
+
+Weak scaling estimates are :
+    8.12    8.08    7.73    7.62    7.26    7.30    6.50    6.28 (efficiency)    for
+       1       2       4       6      12      18      24      32 threads/processors
+
+Average weak scaling efficiency:    7.36 
+
+--------------------------------------------------------------------
+
